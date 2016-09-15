@@ -446,6 +446,10 @@ then
 
 	rm -rf build-date.txt packer/build* tmp/cs-rel/* tmp/cs/* tmp/sv/* ansible/tmp/*
 
+	# Also need to clean ~/svauto.conf.  Otherwise, cannot overwrite things like 
+	# DNS_DOMAIN etc.
+	rm -rf ~/svauto.conf
+
 	echo
 
 	exit 0
